@@ -8,12 +8,20 @@ import { MoveRight } from "lucide-react";
 export default function ProjectsPage() {
     const projects = [
         {
-            title: "AI Solutions @ e-tailize",
+            title: "AI Solutions Intern @ e-tailize",
             description:
-                "Building AI-driven workflow automation and backend features. analyzing application workflows to implement efficient, scalable solutions using Python and Cloud technologies.",
+                "I like to work with AI-assisted development getting down development time by 80-90% while retaining the security with a strong background in cybersecurity.",
             date: "Dec 2025 - Present",
-            tech: ["Python", "AI/ML", "Automation", "Backend"],
+            tech: ["n8n", "Azure", ".net", "Full Stack"],
             link: "https://e-tailize.com",
+        },
+        {
+            title: "Intern @ Varun Beverages Limited (PepsiCo)",
+            description:
+                "Built analytics-driven automation and dashboards to streamline alert triage and reporting workflows. Developed data integrations between security tools and internal systems. Analyzed logs and security signals.",
+            date: "May 2025 – July 2025",
+            tech: ["Python", "SQL", "Automation", "Dashboards"],
+            link: "#",
         },
         {
             title: "SecurGeek",
@@ -39,7 +47,7 @@ export default function ProjectsPage() {
             <div className="px-6 pt-20 mx-auto space-y-8 max-w-7xl lg:px-8 md:space-y-16 md:pt-24 lg:pt-32">
                 <div className="max-w-2xl mx-auto lg:mx-0">
                     <h2 className="text-3xl font-bold tracking-tight text-zinc-100 sm:text-4xl">
-                        Projects
+                        Work
                     </h2>
                     <p className="mt-4 text-zinc-400">
                         A selection of projects focusing on software engineering, automation, and AI solutions.

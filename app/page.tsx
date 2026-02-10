@@ -3,14 +3,14 @@ import React from "react";
 import Particles from "./components/particles";
 
 const navigation = [
-  { name: "Projects", href: "/projects" },
+  { name: "Work", href: "/work" },
   { name: "Contact", href: "/contact" },
 ];
 
 export default function Home() {
   return (
-    <div className="flex flex-col items-center justify-center w-screen h-screen overflow-hidden bg-gradient-to-tl from-black via-zinc-600/20 to-black">
-      <nav className="my-16 animate-fade-in">
+    <div className="flex flex-col items-center justify-center w-screen min-h-screen bg-gradient-to-tl from-black via-zinc-600/20 to-black">
+      <nav className="my-8 animate-fade-in md:my-16">
         <ul className="flex items-center justify-center gap-4">
           {navigation.map((item) => (
             <Link
