@@ -10,7 +10,7 @@ export default function ProjectsPage() {
         {
             title: "AI Solutions Intern @ e-tailize",
             description:
-                "I like to work with AI-assisted development getting down development time by 80-90% while retaining the security with a strong background in cybersecurity.",
+                "Leveraging AI-assisted development to reduce development workflow time by 80-90% while ensuring robust security standards, backed by a strong foundation in cybersecurity.",
             date: "Dec 2025 - Present",
             tech: ["n8n", "Azure", ".net", "Full Stack"],
             link: "https://e-tailize.com",
@@ -21,7 +21,7 @@ export default function ProjectsPage() {
                 "Built analytics-driven automation and dashboards to streamline alert triage and reporting workflows. Developed data integrations between security tools and internal systems. Analyzed logs and security signals.",
             date: "May 2025 – July 2025",
             tech: ["Python", "SQL", "Automation", "Dashboards"],
-            link: "#",
+            link: "https://varunbeverages.com/",
         },
         {
             title: "SecurGeek",
@@ -66,7 +66,7 @@ export default function ProjectsPage() {
                                                 {project.date}
                                             </div>
                                             <span className="flex items-center gap-1 text-xs text-zinc-500">
-                                                <span>{index === 0 ? "Go to Website" : "View Project"}</span> <MoveRight className="w-4 h-4" />
+                                                <span>{index <= 1 ? "Go to Website" : "View Project"}</span> <MoveRight className="w-4 h-4" />
                                             </span>
                                         </div>
 
