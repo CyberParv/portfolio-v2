@@ -10,7 +10,7 @@ const navigation = [
 export default function Home() {
   return (
     <div className="flex flex-col items-center justify-center w-screen min-h-screen bg-gradient-to-tl from-black via-zinc-600/20 to-black">
-      <nav className="my-8 animate-fade-in md:my-16">
+      <nav className="fixed inset-x-0 top-0 z-50 my-8 animate-fade-in md:relative md:inset-auto md:my-16">
         <ul className="flex items-center justify-center gap-8 md:gap-4">
           {navigation.map((item) => (
             <Link
@@ -28,7 +28,7 @@ export default function Home() {
         className="absolute inset-0 -z-10 animate-fade-in"
         quantity={100}
       />
-      <h1 className="z-10 text-4xl text-transparent duration-1000 bg-white cursor-default text-edge-outline animate-title font-display sm:text-6xl md:text-9xl whitespace-nowrap bg-clip-text ">
+      <h1 className="z-10 text-6xl text-transparent duration-1000 bg-white cursor-default text-edge-outline animate-title font-display sm:text-6xl md:text-9xl whitespace-nowrap bg-clip-text ">
         Parv Jain
       </h1>
 
