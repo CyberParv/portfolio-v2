@@ -56,38 +56,41 @@ export default function ProjectsPage() {
                 <div className="w-full h-px bg-zinc-800" />
 
                 <div className="grid grid-cols-1 gap-8 mx-auto lg:grid-cols-2 ">
-                    {/* Featured / Large Card for the most recent role */}
-                    <Card>
-                        <Link href={projects[0].link}>
-                            <article className="relative w-full h-full p-4 md:p-8">
-                                <div className="flex items-center justify-between gap-2">
-                                    <div className="text-xs text-zinc-100">
-                                        {projects[0].date}
-                                    </div>
-                                    <span className="flex items-center gap-1 text-xs text-zinc-500">
-                                        <span>Go to Website</span> <MoveRight className="w-4 h-4" />
-                                    </span>
-                                </div>
+                    <div className="flex flex-col gap-8">
+                        {projects.slice(0, 2).map((project, index) => (
+                            <Card key={project.title}>
+                                <Link href={project.link}>
+                                    <article className="relative w-full h-full p-4 md:p-8">
+                                        <div className="flex items-center justify-between gap-2">
+                                            <div className="text-xs text-zinc-100">
+                                                {project.date}
+                                            </div>
+                                            <span className="flex items-center gap-1 text-xs text-zinc-500">
+                                                <span>{index === 0 ? "Go to Website" : "View Project"}</span> <MoveRight className="w-4 h-4" />
+                                            </span>
+                                        </div>
 
-                                <h2 className="mt-4 text-3xl font-bold text-zinc-100 group-hover:text-white sm:text-4xl font-display">
-                                    {projects[0].title}
-                                </h2>
-                                <p className="mt-4 leading-8 duration-150 text-zinc-400 group-hover:text-zinc-300">
-                                    {projects[0].description}
-                                </p>
-                                <div className="mt-4 flex flex-wrap gap-2">
-                                    {projects[0].tech.map(t => (
-                                        <span key={t} className="text-xs font-medium text-zinc-300 px-2 py-1 bg-zinc-800/50 rounded-full border border-zinc-700">
-                                            {t}
-                                        </span>
-                                    ))}
-                                </div>
-                            </article>
-                        </Link>
-                    </Card>
+                                        <h2 className="mt-4 text-3xl font-bold text-zinc-100 group-hover:text-white sm:text-4xl font-display">
+                                            {project.title}
+                                        </h2>
+                                        <p className="mt-4 leading-8 duration-150 text-zinc-400 group-hover:text-zinc-300">
+                                            {project.description}
+                                        </p>
+                                        <div className="mt-4 flex flex-wrap gap-2">
+                                            {project.tech.map(t => (
+                                                <span key={t} className="text-xs font-medium text-zinc-300 px-2 py-1 bg-zinc-800/50 rounded-full border border-zinc-700">
+                                                    {t}
+                                                </span>
+                                            ))}
+                                        </div>
+                                    </article>
+                                </Link>
+                            </Card>
+                        ))}
+                    </div>
 
                     <div className="flex flex-col w-full gap-8 mx-auto border-t border-gray-900/10 lg:mx-0 lg:border-t-0 ">
-                        {projects.slice(1).map((project) => (
+                        {projects.slice(2).map((project) => (
                             <Card key={project.title}>
                                 <Link href={project.link}>
                                     <article className="p-4 md:p-8">
